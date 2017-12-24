@@ -1,4 +1,4 @@
-package javaapplication1;
+package homeworkTema5;
 
 import java.util.*;
 
@@ -75,18 +75,19 @@ public class MenuAccount {
                     break;
                 case 7:
                     try {
-                        System.out.println("¿Que Cantidad desea ingresar? su saldo actual es de: " + account.balance);
+                        System.out.println("¿Que Cantidad desea ingresar? su saldo actual es de: " + account.balance + " €");
                         balance = scan.nextInt();
                         account.depositMoney(balance);
                     } catch (Exception e) {
-                    }
                     scan.nextLine();
                     balance = 0;
                     System.out.println("Ha introducido un dato incorrecto.");
+                    }
+                    
                     break;
                 case 8:
                     try {
-                        System.out.println("¿Que cantidad desea retirar? su saldo actual es de: " + account.balance);
+                        System.out.println("¿Que cantidad desea retirar? su saldo actual es de: " + account.balance + " €");
                         withdraw = scan.nextInt();
                         account.withdrawBalance(withdraw);
                     } catch (Exception e) {
@@ -96,7 +97,7 @@ public class MenuAccount {
                     }
                     break;
                 case 9:
-                    System.out.println("Su saldo actual es de: " + account.balance);
+                    System.out.println("Su saldo actual es de: " + account.balance + " €");
                     break;
                 case 10:
                     System.out.println("\nHasta pronto, ¡que tenga un buen dia!.\n");

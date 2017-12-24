@@ -1,4 +1,4 @@
-package javaapplication1;
+package homeworkTema5;
 
 /**
  *
@@ -150,14 +150,17 @@ public class BankAccount {
     public void depositMoney(int balance) {
         this.balance += balance;
 
-        System.out.println("Su saldo actual es: " + this.balance);
+        System.out.println("Su saldo actual es: " + this.balance + " €");
     }
 
     public void withdrawBalance(int withdraw) {
 
-        if (withdraw < this.balance) {
+        if (withdraw <= this.balance) {
             this.balance -= withdraw;
+        
+        }else{
+            System.out.println("No se pudo realizar la operacion, la cantidad introducida es superior al efectivo.");
         }
-        System.out.println("Su saldo Actual es de: " + this.balance);
+        System.out.println("Su saldo Actual es de: " + this.balance + " €");
     }
 }
